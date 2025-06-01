@@ -47,7 +47,7 @@ rabbitmq:
   password: guest
   exchange: user-exchange
   queue-admin-or-moderator-created: admin-or-moderator-created-queue
-  queue-role-updated-updated: role-updated-queue
+  queue-role-updated: role-updated-queue
   queue-user-created-updated: user-created-queue
   routing-key-admin-or-moderator-created: admin.moderator.created
   routing-key-user-created: user.created
