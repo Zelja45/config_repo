@@ -14,12 +14,12 @@ spring:
 
   
 rabbitmq:
-host: localhost
-port: 5672
-username: guest
-password: guest
-exchange: incident-exchange
-queue-incident-created: incident-created-queue
-queue-incident-status-updated: status-updated-queue
-routing-key-incident-created: incident.created
-routing-key-incident-status-updated: incident.status.updated
+  host: localhost
+  port: 5672
+  username: guest
+  password: guest
+  exchange: incident-exchange
+  queue-incident-created: incident-created-queue
+  queue-incident-status-updated: status-updated-queue
+  routing-key-incident-created: incident.created
+  routing-key-incident-status-updated: incident.status.updated
