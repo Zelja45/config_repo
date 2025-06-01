@@ -1,0 +1,32 @@
+server:
+  port: ${SERVICE_PORT}
+
+spring:
+  application:
+    name: incident-service
+
+  datasource:
+    url: ${DATASOURCE_URL}
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+rabbitmq:
+  host: ${RABBITMQ_HOST}
+  port: 5672
+  username: guest
+  password: guest
+  exchange: incident-exchange
+  queue-incident-created: incident-created-queue
+  queue-incident-status-updated: status-updated-queue
+  routing-key-incident-created: incident.created
+  routing-key-incident-status-updated: incident.status.updated
