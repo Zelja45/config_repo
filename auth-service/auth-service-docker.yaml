@@ -39,7 +39,6 @@ cookie:
   domain: ${COOKIE_DOMAIN}
   name: IS_MS
 
-
 rabbitmq:
   host: ${RABBITMQ_HOST}
   port: 5672

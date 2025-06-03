@@ -39,7 +39,6 @@ cookie:
   domain: localhost
   name: IS_MS
 
-  
 rabbitmq:
   host: localhost
   port: 5672
