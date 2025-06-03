@@ -39,7 +39,7 @@ cookie:
   domain: localhost
   name: IS_MS
 
-rabbitmq:
+rabbitmq-prop:
   host: localhost
   port: 5672
   username: guest

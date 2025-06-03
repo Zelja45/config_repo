@@ -39,7 +39,7 @@ cookie:
   domain: ${COOKIE_DOMAIN}
   name: IS_MS
 
-rabbitmq:
+rabbitmq-prop:
   host: rabbitmq
   port: 5672
   username: guest
