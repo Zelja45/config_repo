@@ -21,7 +21,7 @@ spring:
       max-request-size: 10MB
 
 rabbitmq:
-  host: ${RABBITMQ_HOST}
+  host: rabittmq
   port: 5672
   username: guest
   password: guest
