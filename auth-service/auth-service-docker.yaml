@@ -30,15 +30,6 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-
-jwt:
-  key: ${JWT_KEY}
-  validity: 24
-
-cookie:
-  domain: ${COOKIE_DOMAIN}
-  name: IS_MS
-
   rabbitmq:
     host: rabbitmq
     port: 5672
@@ -51,4 +42,12 @@ cookie:
     routing-key-admin-or-moderator-created: admin.moderator.created
     routing-key-user-created: user.created
     routing-key-role-updated: role.updated
+
+jwt:
+  key: ${JWT_KEY}
+  validity: 24
+
+cookie:
+  domain: ${COOKIE_DOMAIN}
+  name: IS_MS
 
