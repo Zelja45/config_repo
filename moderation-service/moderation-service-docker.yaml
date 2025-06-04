@@ -12,7 +12,7 @@ spring:
     hibernate:
       ddl-auto: update
 
-
+app:
   rabbitmq:
     host: rabbitmq
     port: 5672
