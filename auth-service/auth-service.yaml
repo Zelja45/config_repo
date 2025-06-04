@@ -30,6 +30,18 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    exchange: user-exchange
+    queue-admin-or-moderator-created: admin-or-moderator-created-queue
+    queue-role-updated: role-updated-queue
+    queue-user-created: user-created-queue
+    routing-key-admin-or-moderator-created: admin.moderator.created
+    routing-key-user-created: user.created
+    routing-key-role-updated: role.updated
 
 jwt:
   key: ${JWT_KEY}
@@ -38,17 +50,4 @@ jwt:
 cookie:
   domain: localhost
   name: IS_MS
-
-rabbitmq-prop:
-  host: localhost
-  port: 5672
-  username: guest
-  password: guest
-  exchange: user-exchange
-  queue-admin-or-moderator-created: admin-or-moderator-created-queue
-  queue-role-updated: role-updated-queue
-  queue-user-created: user-created-queue
-  routing-key-admin-or-moderator-created: admin.moderator.created
-  routing-key-user-created: user.created
-  routing-key-role-updated: role.updated
 
