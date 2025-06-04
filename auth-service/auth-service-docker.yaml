@@ -48,7 +48,7 @@ app:
       queueAdminOrModeratorCreated: admin-or-moderator-created-queue
       queueRoleUpdated: role-updated-queue
       queueUserCreated: user-created-queue
-      routingKeyAdminOrModerator-created: admin.moderator.created
+      routingKeyAdminOrModeratorCreated: admin.moderator.created
       routingKeyUserCreated: user.created
       routingKeyRoleUpdated: role.updated
 
