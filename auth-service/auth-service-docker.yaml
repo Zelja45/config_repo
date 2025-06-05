@@ -51,4 +51,8 @@ app:
       routingKeyAdminOrModeratorCreated: admin.moderator.created
       routingKeyUserCreated: user.created
       routingKeyRoleUpdated: role.updated
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-server:8761/eureka/
 
