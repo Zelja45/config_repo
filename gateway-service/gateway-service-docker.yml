@@ -11,27 +11,25 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-      server:
-        webmvc:
-          routes:
-            - id: incident-service
-              uri: lb://incident-service
-              predicates:
-                - Path=/api/v1/incidents/**
+      routes:
+        - id: incident-service
+          uri: lb://incident-service
+          predicates:
+            - Path=/api/v1/incidents/**
 
-            - id: moderation-service
-              uri: lb://moderation-service
-              predicates:
-                - Path=/api/v1/moderation/**
+        - id: moderation-service
+          uri: lb://moderation-service
+          predicates:
+            - Path=/api/v1/moderation/**
 
-            - id: auth-service
-              uri: lb://auth-service
-              predicates:
-                - Path=/api/v1/auth/**
-            - id: user-service
-              uri: lb://user-service
-              predicates:
-                - Path=/api/v1/users/**
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/api/v1/auth/**
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/api/v1/users/**
 
 eureka:
   client:
