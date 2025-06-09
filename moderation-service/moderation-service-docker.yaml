@@ -12,17 +12,16 @@ spring:
     hibernate:
       ddl-auto: update
 
-app:
-  rabbitmq:
-    host: rabbitmq
-    port: 5672
-    username: guest
-    password: guest
-    exchange: incident-exchange
-    queue-incident-created: incident-created-queue
-    queue-incident-status-updated: status-updated-queue
-    routing-key-incident-created: incident.created
-    routing-key-incident-status-updated: incident.status.updated
+rabbitmq:
+  host: localhost
+  port: 5672
+  username: guest
+  password: guest
+  exchange-created: incident.created.exchange
+  exchange-updated: incident.updated.exchange
+  queue-incident-created: incident-service.created.queue
+  queue-incident-status-updated: incident.updated.queue
+  routing-key-incident-status-updated: incident.status.updated
 eureka:
   client:
     service-url:

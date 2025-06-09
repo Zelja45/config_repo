@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: incident-service
+    name: alert-service
 
   datasource:
     url: ${SPRING_DATASOURCE_URL}
@@ -13,21 +13,13 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-
-  servlet:
-    multipart:
-      enabled: true
-      max-file-size: 10MB
-      max-request-size: 10MB
 rabbitmq:
   host: rabbitmq
   port: 5672
   username: guest
   password: guest
   exchange-created: incident.created.exchange
-  exchange-updated: incident.updated.exchange
-  queue-incident-status-updated: incident.updated.queue
-  routing-key-incident-status-updated: incident.status.updated
+  queue-incident-created: alert-service.created.queue
 eureka:
   client:
     service-url:
