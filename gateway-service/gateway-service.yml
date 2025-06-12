@@ -21,14 +21,21 @@ spring:
           uri: lb://moderation-service
           predicates:
             - Path=/api/v1/moderation/**
+
         - id: auth-service
           uri: lb://auth-service
           predicates:
             - Path=/api/v1/auth/**
+
         - id: user-service
           uri: lb://user-service
           predicates:
             - Path=/api/v1/users/**
+
+        - id: alert-service
+          uri: lb://alert-service
+          predicates:
+              - Path=/api/v1/alert/**
       
 eureka:
   client:

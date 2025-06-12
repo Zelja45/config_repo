@@ -30,8 +30,22 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/api/v1/users/**
+        - id: alert-service
+          uri: lb://alert-service
+          predicates:
+            - Path=/api/v1/alert/**
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${DISCOVERY_SERVER_HOST}:8761/eureka/
+      defaultZone: http://discovery-server:8761/eureka/
+security:
+  public-endpoints:
+    - /api/v1/auth/login
+    - /api/v1/auth/oauth2-login
+    - /api/v1/auth/register
+  authorize-endpoint: http://user-service/api/v1/users/authorize
+  authentication-endpoint: http://auth-service/api/v1/auth/verify-token
+
+cookie:
+  name: IS_MS

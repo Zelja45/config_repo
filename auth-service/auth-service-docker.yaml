@@ -38,19 +38,18 @@ jwt:
 cookie:
   domain: ${COOKIE_DOMAIN}
   name: IS_MS
-app:
-  rabbitmq:
-      host: rabbitmq
-      port: 5672
-      username: guest
-      password: guest
-      exchange: user-exchange
-      queueAdminOrModeratorCreated: admin-or-moderator-created-queue
-      queueRoleUpdated: role-updated-queue
-      queueUserCreated: user-created-queue
-      routingKeyAdminOrModeratorCreated: admin.moderator.created
-      routingKeyUserCreated: user.created
-      routingKeyRoleUpdated: role.updated
+rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest
+    exchange: user-exchange
+    queueAdminOrModeratorCreated: admin-or-moderator-created-queue
+    queueRoleUpdated: role-updated-queue
+    queueUserCreated: user-created-queue
+    routingKeyAdminOrModeratorCreated: admin.moderator.created
+    routingKeyUserCreated: user.created
+    routingKeyRoleUpdated: role.updated
 eureka:
   client:
     service-url:
