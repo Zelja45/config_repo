@@ -33,13 +33,13 @@ spring:
 
 jwt:
   key: ${JWT_KEY}
-  validity: 24
+  validity: ${JWT_VALIDITY}
 
 cookie:
   domain: ${COOKIE_DOMAIN}
   name: IS_MS
 rabbitmq:
-    host: rabbitmq
+    host: ${RABBITMQ_HOST}
     port: 5672
     username: guest
     password: guest
