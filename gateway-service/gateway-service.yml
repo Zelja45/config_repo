@@ -45,6 +45,7 @@ eureka:
 security:
   public-endpoints:
     - /api/v1/auth/login
+    - /api/v1/auth/login-token
     - /api/v1/auth/oauth2-login
     - /api/v1/auth/logout
     - /api/v1/auth/register
