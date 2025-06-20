@@ -37,8 +37,8 @@ spring:
           predicates:
               - Path=/api/v1/alert/**
 
-        - id: alert-service
-          uri: lb://alert-service
+        - id: analytics-service
+          uri: lb://analytics-service
           predicates:
               - Path=/api/v1/analytics/**
       
