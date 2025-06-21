@@ -26,15 +26,22 @@ spring:
           uri: lb://auth-service
           predicates:
             - Path=/api/v1/auth/**
+            
         - id: user-service
           uri: lb://user-service
           predicates:
             - Path=/api/v1/users/**
+
+        - id: role-management-route
+          uri: lb://user-service
+          predicates:
             - Path=/api/v1/role-management/**
+
         - id: alert-service
           uri: lb://alert-service
           predicates:
             - Path=/api/v1/alert/**
+
         - id: analytics-service
           uri: lb://analytics-service
           predicates:
