@@ -1,5 +1,5 @@
 server:
-  port: 8084
+  port: ${SERVICE_PORT}
 
 spring:
   application:
@@ -24,7 +24,7 @@ aws:
   bucketName: nikola-zeljkovic
   
 rabbitmq:
-  host: rabbitmq
+  host: ${RABBITMQ_HOST}
   port: 5672
   username: guest
   password: guest
